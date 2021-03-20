@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import './category_item.dart';
+import "../widgets/category_item.dart";
 
-import 'dummy_data.dart';
+import '../../dummy_data.dart';
 
 class CategoriesScreen extends StatelessWidget {
   @override
@@ -22,8 +22,9 @@ class CategoriesScreen extends StatelessWidget {
         
         children: DUMMY_CATEGORIES.map((category) {
           return CategoryItem(
-            category.title,
-            category.color
+            title: category.title,
+            color: category.color,
+            id: category.id
           );
         }).toList()
       ),
