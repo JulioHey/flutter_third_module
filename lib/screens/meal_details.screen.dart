@@ -19,6 +19,7 @@ class MealDetailScreen extends StatelessWidget {
 
   Widget buildSectionListView(Widget child) {
     return Container(
+      alignment: Alignment.center,
       decoration: BoxDecoration(
         color: Colors.white,
         border: Border.all(
@@ -94,6 +95,16 @@ class MealDetailScreen extends StatelessWidget {
             )
           ]
         )
+      ),
+      floatingActionButton: FloatingActionButton(
+        child: Icon(
+          Icons.delete,
+        ),
+        onPressed: () {
+          Navigator.of(context).pop(
+            mealId
+          );
+        }
       )
     );
   } 
